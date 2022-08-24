@@ -1,0 +1,21 @@
+4. Get employee details(in dict format, empid,name,sal, exp) and update hike for employee with below
+		If exp is 0 to 2 years - 10% Hike
+				  2 to 5 years - 20% Hike
+				  5 to 8 years - 30% Hike
+				  8+           - No hike
+"""
+emp = {
+    "emp_id" : 431,
+    "name": "Navneeta Sinha",
+    "sal" : 45000,
+    "exp" : 1
+}
+if emp["exp"] >= 0 and emp["exp"] <= 2:
+    emp["sal"] += emp["sal"] * 0.1
+elif emp["exp"] > 2 and emp["exp"] <= 5:
+    emp["sal"] += emp["sal"] * 0.2
+elif emp["exp"] > 5 and emp["exp"] <= 8:
+    emp["sal"] += emp["sal"] * 0.3
+else :
+    print("No Hike")
+print(emp["sal"])
